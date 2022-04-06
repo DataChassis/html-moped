@@ -1,0 +1,31 @@
+{
+  "name": "@datachassis/html-moped",
+  "version": "0.1.1",
+  "description": "Create HTML pages from a collection of modules using custom tags and attributes.",
+  "main": "src/moped.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataChassis/html-moped.git"
+  },
+  "keywords": [
+    "html",
+    "generate",
+    "webpage"
+  ],
+  "author": "Data Chassis Ltd",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/DataChassis/html-moped/issues"
+  },
+  "homepage": "https://github.com/DataChassis/html-moped#readme",
+  "bin": {
+    "html-moped": "bin/run.js"
+  },
+  "dependencies": {
+    "html-parse-stringify": "^3.0.1",
+    "node-dir": "^0.1.17"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<single-page-app app-controller="loginController">
+
+    <child-group group="stylesheets">
+        <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+    </child-group>
+
+    <child-group group="scripts">
+        <script src='/js/login.js'></script>
+    </child-group>
+
+    <child-group group="form-controls">
+
+        <h1>Log in</h1>
+        <div class="row mb-3" var-field-name="username" var-display-name="Username">
+            <label for="edit-{{var-field-name}}" class="col-sm-3 col-form-label">{{var-display-name}}</label>
+            <div class="col-sm-9">
+                <input id="edit-{{var-field-name}}" type="text" class="form-control" placeholder="{{var-display-name}}" data-field-name="{{var-field-name}}"
+                    onchange="{{app-controller}}.fieldChanged(this)">
+            </div>
+        </div>
+        <div class="row mb-3" var-field-name="password" var-display-name="Password">
+            <label for="edit-{{var-field-name}}" class="col-sm-3 col-form-label">{{var-display-name}}</label>
+            <div class="col-sm-9">
+                <input id="edit-{{var-field-name}}" type="password" class="form-control" placeholder="{{var-display-name}}" data-field-name="{{var-field-name}}"
+                    onchange="{{app-controller}}.fieldChanged(this)">
+            </div>
+        </div>
+
+    </child-group>
+
+    <child-group group="action-buttons">
+        <button class="btn btn-primary" onclick="{{app-controller}}.login(this)">Login</button>
+        <button class="btn btn-secondary" onclick="{{app-controller}}.register(this)">Register</button>
+    </child-group>
+
+</single-page-app>
